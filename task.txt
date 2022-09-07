@@ -1,0 +1,83 @@
+U ovom zadatku praviti cemo mini TODO organizer aplikaciju. Zadatak aplikacije je da omoguci kreiranje taskova na to do listi, te omogucava prebacivanje istih na done listu kako bismo ih oznacili zavrsenim.
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Ucitati podatke u odgovarajuce liste:
+- U script.js cete primjetiti niz naziva `tasks`. U `index.html` primjetiti cete dva diva sa id-evima: `todoList` i 
+`doneList`. 
+- Iz niza `tasks` ucitati taskove u odgovarajucu listu. (Taskovi kojima je property `finished` true idu na doneListu, inace idu na todoListu). 
+- Kako item-i trebaju otprilike izgledati mozete vidjeti u prilogu zadatka, ali se ne morate toga striktno pridrzavati.
+
+2. Implementirati prebacivanje todo taska na done:
+- Svaki task u todo listi na sebi treba imati `button` naziva `Finish`
+- Nakon sto korisnik klikne na ovaj button, task automatski treba da se prebaci na done listu
+- Ne zaboravite promijeniti property taska finished na true
+
+3. Implementirati otvaranja i zatvaranje modala za dodavanje novog taska:
+- U `index.html` primjetiti cete `button` id-a `addTaskBtn`
+- Odabirom ovog button-a, treba da se otvori modal za dodavanje osnovnih podata o tasku
+- Sto se modala tice, u `index.html` primjetiti cete modal sa id-em `addModal`
+- Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i postaviti `display:none`.
+- Dakle, u ovom koraku trebate samo implementirati jednostavno otvaranje i zatvaranje modala
+
+4. Implementirati dodavanje novog taska:
+- Nakon sto se otvorio modal, omoguciti korisniku da unese podatke o novom tasku
+- Naslov taska je obavezan, dok sadrzaj nije
+- Novokreirani task treba da ima postavljen property `finsihed` na false, te se automatski dodaje u todo listu
+- Id taska treba biti generisan random
+- Implementirati validaciju na formi
+
+5. Implementirati opciju brisanja zavrsenih taskova:
+- Svaki task na done listi treba da ima dugme `Delete`
+- Nakon sto korisnik odabere ovu opciju, task treba da bude izbrisan iz niza i sa liste
+
+
+Za dodatnu vjezbu:
+- Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o taskovima kroz local storage, tako da i kada se
+app refresha - ostanu svi podaci o taskovima.
+- Prebacivanje taskova sa todo na done i obratno implementirati kao drag&drop funkcionalnost (a ne preko buttona Finish).
+- Dodati novu listu `In progress` - u kojoj se nalaze taskovi koji se trenutno rade.
+
+//English translation
+
+In this task, we will create a mini TODO organizer application. The task of the application is to enable the creation of tasks on the to-do list, and enables transferring them to the to-do list in order to mark them as completed.
+Attached is how everything should look at the end.
+
+Implement the following:
+
+1. Load the data into the appropriate lists:
+- In script.js you will notice a series of `tasks' names. In `index.html` you will notice two divs with ids: `todoList` and
+`doneList`.
+- Load tasks from the `tasks' list into the appropriate list. (Tasks whose property `finished' is true go to the doneList, otherwise they go to the todoList).
+- You can see how the items should look roughly in the attachment of the task, but you don't have to strictly adhere to it.
+
+2. Implement switching todo task to done:
+- Each task in the todo list should have a button named `Finish'
+- After the user clicks on this button, the task should automatically be transferred to the done list
+- Don't forget to change the task finished property to true
+
+3. Implement opening and closing modals for adding a new task:
+- In `index.html` you will notice `button` id `addTaskBtn`
+- By selecting this button, a modal should be opened for adding basic data about the task
+- As for the modal, in `index.html` you will notice a modal with the id `addModal`
+- In order for the modal to be displayed, it is necessary to add the class `show` and `display:block`. And vice versa, in order to hide it, it is necessary to remove the `show` class and set `display:none`.
+- So in this step you only need to implement a simple opening and closing of the modal
+
+4. Implement adding a new task:
+- After the modal has opened, allow the user to enter information about the new task
+- The title of the task is mandatory, while the content is not
+- The newly created task should have the `finsihed' property set to false, and it is automatically added to the todo list
+- The task id should be generated randomly
+- Implement form validation
+
+5. Implement the option to delete completed tasks:
+- Each task on the done list should have a ``Delete'' button
+- After the user selects this option, the task should be deleted from the sequence and from the list
+
+
+For extra practice:
+- In addition to this task, you can implement the storage of task data through local storage, so that when
+app refresh - all task data remains.
+- Transfer tasks from todo to done and vice versa, implement as a drag&drop functionality (and not via the Finish button).
+- Add a new ``In progress'' list - which contains tasks that are currently being done.
